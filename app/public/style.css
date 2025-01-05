@@ -1,0 +1,460 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Header */
+.header1 {
+  background-color: #ffffff;
+  color: #333;
+  padding: 0.5rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header1 .logo img {
+  /* color: #333;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold; */
+  height: 50px;
+}
+
+.header1 nav button {
+  background-color: #f08300;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.header1 nav button:hover {
+  background-color: #d67600;
+}
+
+.header2 {
+  background-color: #ebebeb;
+  color: Black;
+  padding: 14px 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header2 nav button {
+  background-color: #ebebeb;
+  /* color: Black; */
+  color: #9b245c;
+  border: none;
+  padding-right: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.header2 nav button :hover {
+  color: black;
+}
+
+/* Footer */
+footer {
+  background-color: #ff7fbba8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  color: #5d5d5f;
+  font-size: 12px;
+  padding: 20px 20rem;
+}
+
+footer .logo img {
+  /* color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px; */
+  height: 60px;
+  padding: 20px;
+}
+
+/* Form Container */
+.form-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 5rem auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.form-container h1 {
+  margin-bottom: 1.5rem;
+  color: #f08300;
+}
+
+.form-container input {
+  width: 92%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #f08300;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container p {
+  margin-top: 1rem;
+}
+
+.form-container a {
+  color: #4267b2;
+  text-decoration: none;
+}
+
+/* Main Content */
+main {
+  width: 100vw;
+  /* max-width: 1000px; */
+  /* margin: 0rem auto 2rem auto; */
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* ----------------------------Index----------------------------- */
+.coverSection > div {
+  height: 70vh;
+  background-image: url(images/bWedding.jpg);
+  background-size: cover;
+  color: #9b245c;
+  font-size: 40px;
+  padding-top: 70px;
+}
+
+.coverSection > div > h2,
+h6 {
+  text-shadow: 4px 4px 20px lightpink;
+}
+
+.RecoProducts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto 80px auto;
+}
+
+.RecoProducts > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  /* margin-bottom: 50px; */
+}
+
+.productCard {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(255, 58, 206, 0.457);
+  transition: 0.3s;
+  border-radius: 5px;
+  height: 300px;
+  width: 300px;
+  margin-right: 30px;
+}
+
+.productCard img {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.productCard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container  */
+.recontainer {
+  padding: 2px 16px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* About Us Section */
+.about-section {
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 8px;
+}
+.about-section h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.about-text {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+.about-image {
+  flex: 1;
+  min-width: 250px;
+}
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* ---------------------------------------------------------------------- */
+/* Venues Section */
+.venues-section {
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 8px;
+}
+.venues-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.venues-section p {
+  margin-bottom: 2rem;
+  color: #666;
+}
+.venues-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.venue-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.venue-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+.venue-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.venue-card h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #333;
+}
+.venue-card p {
+  margin: 0.5rem;
+  color: #666;
+}
+/* ------------------------------------------------------------------- */
+/* Services Section */
+.services-section {
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 8px;
+}
+.services-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.services-section p {
+  margin-bottom: 2rem;
+  color: #666;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.service-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.5rem;
+  text-align: left;
+}
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+.service-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.service-card p {
+  margin: 0.5rem 0;
+  color: #666;
+  line-height: 1.6;
+}
+/* ------------------------------------------------------------------- */
+/* Contact Us Section */
+.contact-section {
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 8px;
+}
+.contact-section h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contact-section p {
+  margin-bottom: 2rem;
+}
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+}
+.contact-info h2 {
+  margin-bottom: 3rem;
+}
+.contact-form {
+  flex: 1;
+  min-width: 250px;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-form label {
+  font-weight: bold;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 95%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+}
+.contact-form button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.contact-form button:hover {
+  background-color: #555;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/*  Container */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 20px;
+  margin: 40px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px 0;
+}
+
+.card p {
+  color: #555;
+  margin: 10px 0;
+}
+
+.card .price {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.card button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #555;
+}
