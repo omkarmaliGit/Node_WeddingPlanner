@@ -209,6 +209,8 @@ function displayContactUs() {
 async function saveContact() {
   e.preventDefault();
 
+  console.log("inside save");
+
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const message = document.getElementById("message").value;
@@ -216,7 +218,7 @@ async function saveContact() {
   const contactData = { name, email, message };
 
   try {
-    const response = await fetch("http://localhost:3000/contacts", {
+    const response = await fetch("http://localhost:3000/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
