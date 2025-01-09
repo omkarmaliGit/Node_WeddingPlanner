@@ -198,10 +198,40 @@ function displayContactUs() {
                         <input type="email" id="email" name="email" required>
                         <label for="message">Message:</label>
                         <textarea id="message" name="message" required></textarea>
-                        <button type="submit">Send Message</button>
+                        <button type="submit" onclick="saveContact()">Send Message</button>
                     </form>
                 </div>
             </div>
         </section>
       `;
+}
+
+async function saveContact() {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  const contactData = { name, email, message };
+
+  try {
+    const response = await fetch("http://localhost:3000/contacts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(contactData),
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+      alert("Contact successfully submitted!");
+    } else {
+      alert(`Error: ${result.message}`);
+    }
+  } catch (error) {
+    console.error("Error posting contact:", error);
+    alert("An error occurred while submitting the contact form.");
+  }
 }
