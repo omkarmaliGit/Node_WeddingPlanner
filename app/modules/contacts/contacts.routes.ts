@@ -9,9 +9,7 @@ ContactRouter.post(
   "/",
   async (req: Request, res: Response, next: NextFunction) => {
     try {
-      console.log("INroutes");
       const result = await contactService.addContact_service(req.body);
-      console.log("OUTroutes");
       res.send(new ResponseHandler(result, CONTACT_MESSAGES.CONTACT_ADD));
     } catch (e) {
       next(e);

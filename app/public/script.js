@@ -175,7 +175,7 @@ function displayServices() {
 }
 
 const contactUsButton = document.getElementById("contactUsBtn");
-contactUsButton.addEventListener("click", displayContactUs());
+contactUsButton.addEventListener("click", displayContactUs);
 
 function displayContactUs() {
   const mainContent = document.getElementById("main-content");
@@ -191,22 +191,25 @@ function displayContactUs() {
                     <p><strong>Address:</strong> 123 Wedding Lane, Pune City</p>
                 </div>
                 <div class="contact-form">
-                    <form>
+                    <form id="contactForm">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required>
                         <label for="message">Message:</label>
                         <textarea id="message" name="message" required></textarea>
-                        <button type="submit" onclick="saveContact()">Send Message</button>
+                        <button type="submit">Send Message</button>
                     </form>
                 </div>
             </div>
         </section>
       `;
+
+  const contactsForm = document.getElementById("contactForm");
+  contactsForm.addEventListener("submit", saveContact);
 }
 
-async function saveContact() {
+async function saveContact(e) {
   e.preventDefault();
 
   console.log("inside save");
@@ -216,6 +219,8 @@ async function saveContact() {
   const message = document.getElementById("message").value;
 
   const contactData = { name, email, message };
+
+  console.log(contactData);
 
   try {
     const response = await fetch("http://localhost:3000/contact", {
@@ -229,6 +234,9 @@ async function saveContact() {
     const result = await response.json();
     if (response.ok) {
       alert("Contact successfully submitted!");
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
     } else {
       alert(`Error: ${result.message}`);
     }

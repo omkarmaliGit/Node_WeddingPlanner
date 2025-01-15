@@ -1,6 +1,7 @@
 import express from "express";
 import { registerRoutes } from "./modules/routes/routes.register";
 import path from "path";
+import { connectToPostgres } from "./connection/postgres.connect";
 
 export const startServer = async () => {
   try {
@@ -8,6 +9,9 @@ export const startServer = async () => {
 
     app.use(express.static(path.join(__dirname, "../../app/public")));
     // console.log(__dirname);
+
+    await connectToPostgres();
+
     registerRoutes(app);
 
     const { PORT } = process.env;
